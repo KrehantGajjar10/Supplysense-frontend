@@ -286,3 +286,6 @@ tr:hover {
     color: white;
     border-radius: 10px;
 }
+.topbar {
+    margin-bottom: 40px;
+}
