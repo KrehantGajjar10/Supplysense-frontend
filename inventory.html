@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Risk - SupplySense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">SS</div>
+            <h2>SupplySense</h2>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="vendor.html">Vendor Risk</a></li>
+            <li><a href="inventory.html">Inventory Risk</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Inventory Risk Dashboard</h1>
+        </div>
+
+        <!-- Alert Banner -->
+        <div class="alert-banner">
+            ⚠ 2 Products at High Stockout Risk
+        </div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Current Stock</th>
+                        <th>Days Until Stockout</th>
+                        <th>Vendor Lead Time</th>
+                        <th>Risk Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>P101</td>
+                        <td>120</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td><span class="badge high">High</span></td>
+                    </tr>
+
+                    <tr>

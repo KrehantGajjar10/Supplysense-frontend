@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Risk - SupplySense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">SS</div>
+            <h2>SupplySense</h2>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="vendor.html">Vendor Risk</a></li>
+            <li><a href="inventory.html">Inventory Risk</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Vendor Risk Dashboard</h1>
+        </div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vendor ID</th>
+                        <th>Risk Score</th>
+                        <th>Risk Level</th>
+                        <th>Delay %</th>
+                        <th>Accuracy %</th>
+                        <th>Price Variance %</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>V001</td>
+                        <td>82</td>
+                        <td><span class="badge high">High</span></td>
+                        <td>18%</td>
+                        <td>76%</td>
+                        <td>12%</td>
+                    </tr>
+
+                    <tr>
+                        <td>V002</td>
+                        <td>45</td>
+                        <td><span class="badge medium">Medium</span></td>
+                        <td>8%</td>
+                        <td>89%</td>
+                        <td>5%</td>
+                    </tr>
+
+                    <tr>
+                        <td>V003</td>
+                        <td>22</td>
+                        <td><span class="badge low">Low</span></td>
+                        <td>3%</td>
+                        <td>96%</td>
+                        <td>2%</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

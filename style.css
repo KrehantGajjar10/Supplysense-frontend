@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #4facfe;
+}
+
+/* Main Section */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.topbar h1 {
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #555;
+}
+
+.card p {
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Color Variants */
+.success {
+    border-left: 5px solid #4CAF50;
+}
+
+.warning {
+    border-left: 5px solid #FF9800;
+}
+
+.danger {
+    border-left: 5px solid #F44336;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #f2f5fa;
+    color: #555;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f9fbff;
+}
+
+/* Risk Badges */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.high {
+    background: #ffe5e5;
+    color: #e53935;
+}
+
+.medium {
+    background: #fff3e0;
+    color: #fb8c00;
+}
+
+.low {
+    background: #e8f5e9;
+    color: #43a047;
+}
+
+/* Alert Banner */
+.alert-banner {
+    background: #fff3e0;
+    color: #e65100;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
