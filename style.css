@@ -11,24 +11,29 @@ body {
 
 .layout {
     display: flex;
+    min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
-    width: 250px;
-    height: 100vh;
+    width: 270px;
+    flex-shrink: 0;   /* important - sidebar shrink nahi hoga */
     background: white;
-    padding: 20px;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    padding: 25px 20px;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+}
+.main {
+    flex: 1;   /* automatically remaining space lega */
+    padding: 40px;
+    background: #f4f7fb;
 }
 
+/* Logo Section */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 40px;
 }
-
 .logo-icon {
     width: 40px;
     height: 40px;
@@ -41,33 +46,45 @@ body {
     font-weight: bold;
 }
 
+.logo-sub {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Navigation */
 .nav {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.nav li {
-    margin: 15px 0;
-}
-
-.nav a {
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: 0.3s;
 }
 
-.nav a:hover {
+.nav-link:hover {
+    background: #f0f6ff;
     color: #4facfe;
 }
 
-/* Main Section */
-.main {
-    flex: 1;
-    padding: 30px;
+.nav-link.active {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
 }
 
-.topbar h1 {
-    margin-bottom: 30px;
+.icon {
+    font-size: 16px;
 }
+
 
 /* Cards */
 .cards {
@@ -171,3 +188,101 @@ tr:hover {
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
+.current-vendor {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recommend-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.recommend-card:hover {
+    transform: translateY(-5px);
+}
+
+.best {
+    border: 2px solid #4CAF50;
+}
+
+
+.sub {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.gradient-red {
+    background: linear-gradient(135deg, #ff6a6a, #ff3d3d);
+    color: white;
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #ffb347, #ff9800);
+    color: white;
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    color: white;
+}
+
+
+
+.alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alert-item {
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.high-alert {
+    background: #ffe5e5;
+    color: #e53935;
+}
+
+.medium-alert {
+    background: #fff3e0;
+    color: #fb8c00;
+}
+
+.low-alert {
+    background: #e8f5e9;
+    color: #43a047;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+}
+
+.main {
+    margin-left: 270px;
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    border-radius: 10px;
+}

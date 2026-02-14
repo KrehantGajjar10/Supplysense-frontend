@@ -2,84 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vendor Risk - SupplySense</title>
+    <title>Recommendations - SupplySense</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="layout">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <div class="logo-icon">SS</div>
-            <h2>SupplySense</h2>
-        </div>
+   <div class="sidebar">
 
-        <ul class="nav">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="vendor.html">Vendor Risk</a></li>
-            <li><a href="inventory.html">Inventory Risk</a></li>
-            <li><a href="recommendations.html">Recommendations</a></li>
-        </ul>
+    <div class="logo">
+        <div class="logo-icon">SS</div>
+        <div>
+            <h2>SupplySense</h2>
+            
+        </div>
     </div>
+
+    <ul class="nav">
+
+        <li>
+            <a href="index.html" class="nav-link ">
+                <span class="icon">🏠</span>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="vendor.html" class="nav-link">
+                <span class="icon">📊</span>
+                Vendor Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="inventory.html" class="nav-link">
+                <span class="icon">📦</span>
+                Inventory Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="recommendations.html" class="nav-link">
+                <span class="icon">🤖</span>
+                Recommendations
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
 
     <!-- Main -->
     <div class="main">
 
         <div class="topbar">
-            <h1>Vendor Risk Dashboard</h1>
+            <h1>Smart Vendor Recommendation</h1>
         </div>
 
-        <!-- Table -->
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Vendor ID</th>
-                        <th>Risk Score</th>
-                        <th>Risk Level</th>
-                        <th>Delay %</th>
-                        <th>Accuracy %</th>
-                        <th>Price Variance %</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <!-- Current Vendor Status -->
+        <div class="current-vendor">
+            <h3>Product ID: P101</h3>
+            <p>Current Vendor: <strong>V001</strong></p>
+            <p>Risk Level: <span class="badge high">High</span></p>
+        </div>
 
-                    <tr>
-                        <td>V001</td>
-                        <td>82</td>
-                        <td><span class="badge high">High</span></td>
-                        <td>18%</td>
-                        <td>76%</td>
-                        <td>12%</td>
-                    </tr>
+        <!-- Suggested Vendors -->
+        <h2 style="margin: 25px 0 15px;">Suggested Alternatives</h2>
 
-                    <tr>
-                        <td>V002</td>
-                        <td>45</td>
-                        <td><span class="badge medium">Medium</span></td>
-                        <td>8%</td>
-                        <td>89%</td>
-                        <td>5%</td>
-                    </tr>
+        <div class="recommendation-grid">
 
-                    <tr>
-                        <td>V003</td>
-                        <td>22</td>
-                        <td><span class="badge low">Low</span></td>
-                        <td>3%</td>
-                        <td>96%</td>
-                        <td>2%</td>
-                    </tr>
+            <div class="recommend-card best">
+                <h3>#1 Recommended</h3>
+                <p><strong>Vendor ID:</strong> V003</p>
+                <p>Risk Score: 18</p>
+                <p>Delay %: 3%</p>
+                <p>Accuracy: 97%</p>
+                <p>Price Stability: High</p>
+            </div>
 
-                </tbody>
-            </table>
+            <div class="recommend-card">
+                <h3>#2 Alternative</h3>
+                <p><strong>Vendor ID:</strong> V007</p>
+                <p>Risk Score: 35</p>
+                <p>Delay %: 6%</p>
+                <p>Accuracy: 91%</p>
+                <p>Price Stability: Medium</p>
+            </div>
+
+            <div class="recommend-card">
+                <h3>#3 Alternative</h3>
+                <p><strong>Vendor ID:</strong> V012</p>
+                <p>Risk Score: 48</p>
+                <p>Delay %: 9%</p>
+                <p>Accuracy: 87%</p>
+                <p>Price Stability: Medium</p>
+            </div>
+
         </div>
 
     </div>
 
 </div>
+
+<script>
+    const links = document.querySelectorAll(".nav-link");
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 </body>
 </html>

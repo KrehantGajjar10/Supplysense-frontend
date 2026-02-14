@@ -9,20 +9,50 @@
 
 <div class="layout">
 
-    <!-- Sidebar -->
     <div class="sidebar">
-        <div class="logo">
-            <div class="logo-icon">SS</div>
-            <h2>SupplySense</h2>
-        </div>
 
-        <ul class="nav">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="vendor.html">Vendor Risk</a></li>
-            <li><a href="inventory.html">Inventory Risk</a></li>
-            <li><a href="recommendations.html">Recommendations</a></li>
-        </ul>
+    <div class="logo">
+        <div class="logo-icon">SS</div>
+        <div>
+            <h2>SupplySense</h2>
+        
+        </div>
     </div>
+
+    <ul class="nav">
+
+        <li>
+            <a href="index.html" class="nav-link ">
+                <span class="icon">🏠</span>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="vendor.html" class="nav-link">
+                <span class="icon">📊</span>
+                Vendor Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="inventory.html" class="nav-link">
+                <span class="icon">📦</span>
+                Inventory Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="recommendations.html" class="nav-link">
+                <span class="icon">🤖</span>
+                Recommendations
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
 
     <!-- Main -->
     <div class="main">
@@ -80,6 +110,18 @@
     </div>
 
 </div>
+
+<script>
+    const links = document.querySelectorAll(".nav-link");
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 </body>
 </html>

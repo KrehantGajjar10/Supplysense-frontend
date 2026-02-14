@@ -9,20 +9,50 @@
 
     <div class="layout">
 
-    <!-- Sidebar -->
     <div class="sidebar">
-        <div class="logo">
-            <div class="logo-icon">SS</div>
-            <h2>SupplySense</h2>
-        </div>
 
-        <ul class="nav">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="vendor.html">Vendor Risk</a></li>
-            <li><a href="inventory.html">Inventory Risk</a></li>
-            <li><a href="recommendations.html">Recommendations</a></li>
-        </ul>
+    <div class="logo">
+        <div class="logo-icon">SS</div>
+        <div>
+            <h2>SupplySense</h2>
+            
+        </div>
     </div>
+
+    <ul class="nav">
+
+        <li>
+            <a href="index.html" class="nav-link ">
+                <span class="icon">🏠</span>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="vendor.html" class="nav-link">
+                <span class="icon">📊</span>
+                Vendor Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="inventory.html" class="nav-link">
+                <span class="icon">📦</span>
+                Inventory Risk
+            </a>
+        </li>
+
+        <li>
+            <a href="recommendations.html" class="nav-link">
+                <span class="icon">🤖</span>
+                Recommendations
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
 
     <!-- Main Content -->
     <div class="main">
@@ -30,31 +60,67 @@
             <h1>Dashboard Overview</h1>
         </div>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Total Vendors</h3>
-                <p>24</p>
-            </div>
+   
 
-            <div class="card warning">
-                <h3>Medium Risk Vendors</h3>
-                <p>8</p>
-            </div>
+<div class="cards">
 
-            <div class="card danger">
-                <h3>High Risk Vendors</h3>
-                <p>3</p>
-            </div>
+    <div class="card gradient-blue">
+        <h3>Total Vendors</h3>
+        <p>24</p>
+        <span class="sub">Active suppliers</span>
+    </div>
 
-            <div class="card success">
-                <h3>Safe Vendors</h3>
-                <p>13</p>
-            </div>
-        </div>
+    <div class="card gradient-red">
+        <h3>High Risk Vendors</h3>
+        <p>3</p>
+        <span class="sub">Immediate attention</span>
+    </div>
 
+    <div class="card gradient-orange">
+        <h3>Medium Risk</h3>
+        <p>8</p>
+        <span class="sub">Monitor closely</span>
+    </div>
+
+    <div class="card gradient-green">
+        <h3>Low Risk</h3>
+        <p>13</p>
+        <span class="sub">Stable vendors</span>
     </div>
 
 </div>
+
+
+
+<h2 style="margin: 40px 0 20px;">Recent Alerts</h2>
+
+<div class="alerts">
+
+    <div class="alert-item high-alert">
+        Vendor V001 moved to High Risk
+    </div>
+
+    <div class="alert-item medium-alert">
+        Product P101 nearing stockout
+    </div>
+
+    <div class="alert-item low-alert">
+        Vendor V003 performance improved
+    </div>
+
+</div>
+
+<script>
+    const links = document.querySelectorAll(".nav-link");
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 
 </body>
